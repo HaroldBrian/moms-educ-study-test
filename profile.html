@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mon Profil - MOMSEDUC Study</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-sidebar">
+        <div class="p-4 text-center border-bottom">
+            <h4 class="text-white mb-0"><i class="fas fa-graduation-cap me-2"></i>MOMSEDUC</h4>
+            <small class="text-light">Espace Étudiant</small>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+            <li><a href="profile.html" class="active"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
+            <li><a href="documents.html"><i class="fas fa-file-alt me-2"></i>Mes Documents</a></li>
+            <li><a href="attestations.html"><i class="fas fa-certificate me-2"></i>Mes Attestations</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Mon Profil</h2>
+            <div class="d-flex align-items-center">
+                <span class="me-3">Bienvenue, <strong>Jean Dupont</strong></span>
+                <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card-custom p-4">
+                    <h5 class="mb-4"><i class="fas fa-user me-2"></i>Informations personnelles</h5>
+                    <form id="profileForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="civilite">
+                                        <option value="M" selected>Monsieur</option>
+                                        <option value="Mme">Madame</option>
+                                        <option value="Mlle">Mademoiselle</option>
+                                    </select>
+                                    <label for="civilite">Civilité</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nom" value="Dupont" required>
+                                    <label for="nom">Nom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="prenom" value="Jean" required>
+                                    <label for="prenom">Prénom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="dateNaissance" value="1995-05-15" required>
+                                    <label for="dateNaissance">Date de naissance</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" value="jean.dupont@email.com" required>
+                                    <label for="email">Adresse email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="telephone" value="+237 690 123 456" required>
+                                    <label for="telephone">Numéro de téléphone</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="paysResidence">
+                                        <option value="cameroun" selected>Cameroun</option>
+                                        <option value="senegal">Sénégal</option>
+                                        <option value="cote-ivoire">Côte d'Ivoire</option>
+                                        <option value="mali">Mali</option>
+                                        <option value="burkina">Burkina Faso</option>
+                                    </select>
+                                    <label for="paysResidence">Pays de résidence</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="paysDestination">
+                                        <option value="france" selected>France</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="belgique">Belgique</option>
+                                        <option value="allemagne">Allemagne</option>
+                                        <option value="suisse">Suisse</option>
+                                    </select>
+                                    <label for="paysDestination">Pays de destination</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="adresse" style="height: 100px" required>123 Rue de la Paix, Yaoundé, Cameroun</textarea>
+                                    <label for="adresse">Adresse complète</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary py-2 px-4">
+                                    <i class="fas fa-save me-2"></i>Enregistrer les modifications
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-custom p-4 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-camera me-2"></i>Photo de profil</h5>
+                    <div class="text-center">
+                        <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" alt="Profile" class="rounded-circle mb-3" style="width: 120px; height: 120px;">
+                        <div>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-upload me-1"></i>Changer la photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-custom p-4">
+                    <h5 class="mb-3"><i class="fas fa-lock me-2"></i>Sécurité</h5>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-secondary">
+                            <i class="fas fa-key me-2"></i>Changer le mot de passe
+                        </button>
+                        <button class="btn btn-outline-info">
+                            <i class="fas fa-shield-alt me-2"></i>Authentification 2FA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Profil mis à jour avec succès !');
+        });
+    </script>
+</body>
+
+</html>

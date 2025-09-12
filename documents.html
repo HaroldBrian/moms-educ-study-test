@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mes Documents - MOMSEDUC Study</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-sidebar">
+        <div class="p-4 text-center border-bottom">
+            <h4 class="text-white mb-0"><i class="fas fa-graduation-cap me-2"></i>MOMSEDUC</h4>
+            <small class="text-light">Espace Étudiant</small>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+            <li><a href="profile.html"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
+            <li><a href="documents.html" class="active"><i class="fas fa-file-alt me-2"></i>Mes Documents</a></li>
+            <li><a href="attestations.html"><i class="fas fa-certificate me-2"></i>Mes Attestations</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Mes Documents</h2>
+            <div class="d-flex align-items-center">
+                <span class="me-3">Bienvenue, <strong>Jean Dupont</strong></span>
+                <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card-custom p-4 mb-4">
+                    <h5 class="mb-4"><i class="fas fa-upload me-2"></i>Uploader un nouveau document</h5>
+                    <div class="document-upload">
+                        <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
+                        <h6>Glissez-déposez vos fichiers ici</h6>
+                        <p class="text-muted">ou cliquez pour sélectionner</p>
+                        <input type="file" class="form-control" id="fileUpload" multiple accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                        <button class="btn btn-primary" onclick="document.getElementById('fileUpload').click()">
+                            <i class="fas fa-plus me-2"></i>Sélectionner des fichiers
+                        </button>
+                        <small class="d-block mt-2 text-muted">Formats acceptés : PDF, JPG, PNG (Max 5MB par fichier)</small>
+                    </div>
+                </div>
+
+                <div class="card-custom p-4">
+                    <h5 class="mb-4"><i class="fas fa-folder me-2"></i>Mes documents uploadés</h5>
+                    <div class="document-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Passeport.pdf</h6>
+                                    <small class="text-muted">Uploadé le 15/01/2024 - 2.3 MB</small>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-success me-2">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="document-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-file-image fa-2x text-info me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Diplome_Bac.jpg</h6>
+                                    <small class="text-muted">Uploadé le 12/01/2024 - 1.8 MB</small>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-success me-2">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="document-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+                                <div>
+                                    <h6 class="mb-1">Relevé_Notes.pdf</h6>
+                                    <small class="text-muted">Uploadé le 10/01/2024 - 1.2 MB</small>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-outline-primary me-2">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-success me-2">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-custom p-4 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-info-circle me-2"></i>Types de documents</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Passeport</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diplômes</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Relevés de notes</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Certificats de naissance</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Photos d'identité</li>
+                        <li class="mb-0"><i class="fas fa-check text-success me-2"></i>Justificatifs financiers</li>
+                    </ul>
+                </div>
+                <div class="card-custom p-4">
+                    <h5 class="mb-3"><i class="fas fa-chart-pie me-2"></i>Espace de stockage</h5>
+                    <div class="progress mb-3" style="height: 10px;">
+                        <div class="progress-bar bg-primary" style="width: 35%"></div>
+                    </div>
+                    <p class="mb-0">35 MB utilisés sur 100 MB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.getElementById('fileUpload').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                alert(`${files.length} fichier(s) sélectionné(s). Upload en cours...`);
+                setTimeout(() => {
+                    alert('Fichiers uploadés avec succès !');
+                    location.reload();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>

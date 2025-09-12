@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard - MOMSEDUC Study</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-sidebar">
+        <div class="p-4 text-center border-bottom">
+            <h4 class="text-white mb-0"><i class="fas fa-graduation-cap me-2"></i>MOMSEDUC</h4>
+            <small class="text-light">Espace Étudiant</small>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a></li>
+            <li><a href="profile.html"><i class="fas fa-user me-2"></i>Mon Profil</a></li>
+            <li><a href="documents.html"><i class="fas fa-file-alt me-2"></i>Mes Documents</a></li>
+            <li><a href="attestations.html"><i class="fas fa-certificate me-2"></i>Mes Attestations</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+        </ul>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Dashboard</h2>
+            <div class="d-flex align-items-center">
+                <span class="me-3">Bienvenue, <strong>Jean Dupont</strong></span>
+                <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card">
+                    <div class="stats-number">3</div>
+                    <h6>Attestations AVI</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card">
+                    <div class="stats-number">7</div>
+                    <h6>Documents uploadés</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card">
+                    <div class="stats-number">2</div>
+                    <h6>Demandes en cours</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-card">
+                    <div class="stats-number">98%</div>
+                    <h6>Profil complété</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card-custom p-4">
+                    <h5 class="mb-4"><i class="fas fa-clock me-2"></i>Activités récentes</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                            <div>
+                                <h6 class="mb-1">AVI France validée</h6>
+                                <small class="text-muted">Votre attestation pour la France a été approuvée</small>
+                            </div>
+                            <small class="text-success">Il y a 2 heures</small>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                            <div>
+                                <h6 class="mb-1">Document uploadé</h6>
+                                <small class="text-muted">Passeport ajouté avec succès</small>
+                            </div>
+                            <small class="text-muted">Hier</small>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center border-0 px-0">
+                            <div>
+                                <h6 class="mb-1">Profil mis à jour</h6>
+                                <small class="text-muted">Informations personnelles modifiées</small>
+                            </div>
+                            <small class="text-muted">Il y a 3 jours</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-custom p-4">
+                    <h5 class="mb-4"><i class="fas fa-tasks me-2"></i>Actions rapides</h5>
+                    <div class="d-grid gap-2">
+                        <a href="demande-avi.html" class="btn btn-primary">
+                            <i class="fas fa-plus me-2"></i>Nouvelle demande AVI
+                        </a>
+                        <a href="documents.html" class="btn btn-outline-primary">
+                            <i class="fas fa-upload me-2"></i>Uploader un document
+                        </a>
+                        <a href="profile.html" class="btn btn-outline-secondary">
+                            <i class="fas fa-edit me-2"></i>Modifier mon profil
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-info">
+                            <i class="fas fa-headset me-2"></i>Contacter le support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-12">
+                <div class="card-custom p-4">
+                    <h5 class="mb-4"><i class="fas fa-certificate me-2"></i>Mes dernières attestations</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Numéro AVI</th>
+                                    <th>Pays</th>
+                                    <th>Date de création</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AVI-FR-2024-001</td>
+                                    <td>France</td>
+                                    <td>15/01/2024</td>
+                                    <td><span class="badge bg-success">Validée</span></td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-primary">Télécharger</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>AVI-CA-2024-002</td>
+                                    <td>Canada</td>
+                                    <td>10/01/2024</td>
+                                    <td><span class="badge bg-warning">En cours</span></td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-secondary">Voir détails</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

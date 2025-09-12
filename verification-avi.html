@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Qui sommes-nous ? - MOMSEDUC Study</title>
+    <title>Vérification AVI - MOMSEDUC Study</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="MOMSEDUC Study, équipe, mission, études à l'étranger" name="keywords">
-    <meta content="Découvrez MOMSEDUC Study, notre équipe et notre mission d'accompagner les étudiants africains" name="description">
+    <meta content="vérification AVI, authentification attestation, contrôle validité" name="keywords">
+    <meta content="Vérifiez l'authenticité et la validité d'une Attestation de Virement Irrévocable" name="description">
 
     <link href="img/favicon.ico" rel="icon">
 
@@ -18,8 +18,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -62,7 +60,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link">Accueil</a>
-                    <a href="about.html" class="nav-item nav-link active">Qui sommes-nous ?</a>
+                    <a href="about.html" class="nav-item nav-link">Qui sommes-nous ?</a>
                     <a href="pricing.html" class="nav-item nav-link">Tarifs</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
@@ -86,11 +84,11 @@
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Qui sommes-nous ?</h1>
+                        <h1 class="display-3 text-white animated slideInDown">Vérification AVI</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">À propos</li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Vérification AVI</li>
                             </ol>
                         </nav>
                     </div>
@@ -101,74 +99,54 @@
 
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="Équipe MOMSEDUC" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">Notre Mission</h6>
-                    <h1 class="mb-4">MOMSEDUC Study, votre partenaire de confiance</h1>
-                    <p class="mb-4">Depuis notre création, MOMSEDUC Study s'est imposée comme le leader de l'accompagnement des étudiants africains dans leurs projets d'études à l'étranger.</p>
-                    <p class="mb-4">Notre expertise couvre tous les aspects de la mobilité internationale : de l'obtention des documents administratifs jusqu'à l'installation dans le pays de destination.</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Conformité légale</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card-custom p-5">
+                        <div class="text-center mb-4">
+                            <h3><i class="fas fa-shield-check text-primary me-2"></i>Vérification d'Attestation AVI</h3>
+                            <p class="text-muted">Vérifiez l'authenticité et la validité d'une Attestation de Virement Irrévocable</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Processus sécurisé</p>
+                        <form id="verificationForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="numeroAvi" placeholder="Numéro AVI" required>
+                                        <label for="numeroAvi">Numéro AVI</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="nomEtudiant" placeholder="Nom complet" required>
+                                        <label for="nomEtudiant">Nom complet de l'étudiant</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary py-3 px-5" type="submit">
+                                        <i class="fas fa-search me-2"></i>Vérifier l'AVI
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div id="verificationResult" class="verification-result" style="display: none;">
+                            <div class="text-center">
+                                <i class="fas fa-check-circle fa-3x mb-3"></i>
+                                <h4>AVI Valide</h4>
+                                <p class="mb-3">Cette Attestation de Virement Irrévocable est authentique et valide.</p>
+                                <div class="row text-start">
+                                    <div class="col-md-6">
+                                        <p><strong>Numéro :</strong> AVI-FR-2024-001</p>
+                                        <p><strong>Étudiant :</strong> Jean Dupont</p>
+                                        <p><strong>Pays :</strong> France</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p><strong>Date d'émission :</strong> 15/01/2024</p>
+                                        <p><strong>Date d'expiration :</strong> 15/07/2024</p>
+                                        <p><strong>Statut :</strong> <span class="badge bg-success">Valide</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Équipe experte</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Support multilingue</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Réseau international</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Satisfaction garantie</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Nos Valeurs</h6>
-                <h1 class="mb-5">Ce qui nous guide</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="card-custom p-4 text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h5>Fiabilité</h5>
-                        <p>Nous garantissons la conformité et la validité de tous nos documents et services.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="card-custom p-4 text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h5>Accompagnement</h5>
-                        <p>Un suivi personnalisé et un accompagnement humain tout au long de votre parcours.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="card-custom p-4 text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h5>Rapidité</h5>
-                        <p>Des délais de traitement optimisés pour répondre à l'urgence de vos démarches.</p>
                     </div>
                 </div>
             </div>
@@ -177,29 +155,16 @@
 
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="stats-card">
-                        <div class="stats-number">2500+</div>
-                        <h5>Étudiants accompagnés</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="stats-card">
-                        <div class="stats-number">15</div>
-                        <h5>Pays partenaires</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="stats-card">
-                        <div class="stats-number">98%</div>
-                        <h5>Taux de satisfaction</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="stats-card">
-                        <div class="stats-number">24/7</div>
-                        <h5>Support disponible</h5>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-custom p-4">
+                        <h5 class="text-primary mb-3"><i class="fas fa-info-circle me-2"></i>À propos de la vérification</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Vérification en temps réel de l'authenticité</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contrôle de la validité et des dates</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Système sécurisé et confidentiel</li>
+                            <li class="mb-0"><i class="fas fa-check text-success me-2"></i>Service gratuit et accessible 24/7</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -265,8 +230,24 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('verificationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const numeroAvi = document.getElementById('numeroAvi').value;
+            const nomEtudiant = document.getElementById('nomEtudiant').value;
+            const resultDiv = document.getElementById('verificationResult');
+            
+            // Simulation de vérification
+            setTimeout(() => {
+                resultDiv.style.display = 'block';
+                resultDiv.className = 'verification-result verification-valid';
+                resultDiv.scrollIntoView({ behavior: 'smooth' });
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>
