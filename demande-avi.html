@@ -85,7 +85,7 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="hero-title text-white animated slideInDown">Demande d'AVI</h1>
-                        <p class="hero-description text-white animated slideInDown">
+                        <p class="hero-description-text animated slideInDown">
                             Obtenez votre Attestation de Virement Irrévocable en quelques clics. 
                             Processus simplifié, traitement rapide et document certifié.
                         </p>
@@ -101,23 +101,15 @@
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="card-custom p-5">
                         <div class="text-center mb-4">
-                            <h3>Formulaire de demande d'AVI</h3>
+                            <h3 class="text-primary">Formulaire de demande d'AVI</h3>
                             <p class="text-muted">Remplissez ce formulaire pour obtenir votre Attestation de Virement Irrévocable</p>
                         </div>
                         <form id="aviForm">
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" id="serviceType" required>
-                                            <option value="">Sélectionner un service</option>
-                                            <option value="avi">Attestation AVI</option>
-                                            <option value="logement">Logement étudiant</option>
-                                            <option value="billets">Billets d'avion</option>
-                                            <option value="caution">Caution bancaire</option>
-                                            <option value="visa">Procédure de voyage</option>
-                                            <option value="autre">Autre</option>
-                                        </select>
-                                        <label for="serviceType">Service demandé</label>
+                                        <input type="text" class="form-control" value="Attestation AVI" readonly>
+                                        <label>Service demandé</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -188,6 +180,7 @@
                                             <option value="belgique">Belgique</option>
                                             <option value="allemagne">Allemagne</option>
                                             <option value="suisse">Suisse</option>
+                                            <option value="luxembourg">Luxembourg</option>
                                             <option value="espagne">Espagne</option>
                                             <option value="italie">Italie</option>
                                         </select>
@@ -231,13 +224,26 @@
                 <div class="col-lg-8">
                     <div class="card-custom p-4">
                         <h5 class="text-primary mb-3"><i class="fas fa-info-circle me-2"></i>Informations importantes</h5>
+                        <div class="row g-3">
+                            <div class="col-md-6">
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Traitement en 48h ouvrées maximum</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Document certifié et sécurisé</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Téléchargement depuis votre espace personnel</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Support inclus pendant toute la durée</li>
-                            <li class="mb-0"><i class="fas fa-check text-success me-2"></i>Tarif : 75€ TTC</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Traitement express en 48h maximum</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Document certifié conforme consulats</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Téléchargement sécurisé 24/7</li>
                         </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Support expert inclus</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantie satisfaction 100%</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tarif transparent : 75€ TTC</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="highlight-box mt-4">
+                            <h5><i class="fas fa-clock me-2"></i>Délais de Traitement</h5>
+                            <p class="mb-0">Standard : 48h | Express : 24h (+25€) | Urgence : 12h (+50€)</p>
+                        </div>
                     </div>
                 </div>
             </div>

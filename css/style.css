@@ -32,6 +32,47 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Hiérarchie des titres améliorée */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.section-title-main {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .section-title-main {
+        font-size: 2rem;
+    }
+}
+
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -82,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
 }
 
+/* Navbar améliorée avec bouton Vérifier AVI */
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -103,6 +145,16 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .navbar-fixed .navbar-nav .nav-link {
@@ -133,6 +185,33 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 45px;
 }
 
+.btn-verify-avi {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-verify-avi:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar-fixed .btn-verify-avi {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.navbar-fixed .btn-verify-avi:hover {
+    background: #e55a00;
+    border-color: #e55a00;
+}
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
         position: relative;
@@ -153,6 +232,14 @@ h1, h2, h3, h4, h5, h6 {
 
     .navbar-light .navbar-brand img {
         max-height: 45px;
+    }
+
+    .btn-verify-avi {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        margin-top: 10px;
+        width: 100%;
     }
 }
 
@@ -193,38 +280,39 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Hero Section avec background sombre */
 .hero-header {
-    background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(44, 62, 80, 0.9)), url(https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 62, 80, 0.85)), url(https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(44, 62, 80, 0.7));
+    z-index: 1;
 }
 
-.hero-description {
-    font-size: 1.25rem;
+.hero-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-description-text {
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-description {
-        font-size: 1.1rem;
-    }
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -274,6 +362,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
     border-radius: 15px;
+    height: 100%;
 }
 
 .service-item:hover {
@@ -287,6 +376,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-item:hover * {
     color: var(--light) !important;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--secondary);
+    transform: translateX(5px);
+}
+
+.service-link i {
+    transition: all 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(3px);
+}
+
+.service-item:hover .service-link {
+    color: white !important;
 }
 
 .destination img {
@@ -587,6 +702,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s;
+    background: white;
 }
 
 .card-custom:hover {
@@ -740,6 +856,12 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     padding: 25px;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .stats-number {
@@ -775,6 +897,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto 20px;
     color: white;
     font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
 }
 
 .process-step {
@@ -877,43 +1004,6 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--primary);
 }
 
-.btn-verify-avi {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-.btn-verify-avi:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.service-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.service-link:hover {
-    color: var(--secondary);
-    transform: translateX(5px);
-}
-
-.service-link i {
-    transition: all 0.3s ease;
-}
-
-.service-link:hover i {
-    transform: translateX(3px);
-}
-
 .country-flag {
     width: 30px;
     height: 20px;
@@ -928,6 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    height: 100%;
 }
 
 .profile-type-card:hover {
@@ -979,4 +1070,184 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 25px;
     color: white;
     font-size: 2rem;
+}
+
+/* Styles pour les nouvelles pages de destinations */
+.destination-hero {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(44, 62, 80, 0.85));
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.country-info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.country-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-detail-section {
+    padding: 60px 0;
+}
+
+.service-detail-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon-large {
+    width: 100px;
+    height: 100px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.advantage-list {
+    list-style: none;
+    padding: 0;
+}
+
+.advantage-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.advantage-list li:last-child {
+    border-bottom: none;
+}
+
+.advantage-list i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 500px;
+    }
+    
+    .hero-carousel .carousel-item {
+        height: 500px;
+    }
+    
+    .hero-carousel .carousel-caption {
+        width: 90%;
+    }
+    
+    .hero-carousel .carousel-control-prev,
+    .hero-carousel .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .hero-carousel .carousel-control-prev {
+        left: 15px;
+    }
+    
+    .hero-carousel .carousel-control-next {
+        right: 15px;
+    }
+}
+
+/* Animation améliorée */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Styles pour les nouvelles sections enrichies */
+.enriched-content {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 30px 0;
+}
+
+.enriched-content h4 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.enriched-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enriched-content ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.enriched-content ul li:last-child {
+    border-bottom: none;
+}
+
+.cost-breakdown {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cost-item:last-child {
+    border-bottom: none;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.highlight-box h4 {
+    color: white;
+    margin-bottom: 15px;
 }

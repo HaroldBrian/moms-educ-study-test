@@ -67,6 +67,17 @@
         return false;
     });
 
+    // Navbar fixe sur mobile améliorée
+    $(window).scroll(function () {
+        const navbar = $('.navbar');
+        if ($(window).width() <= 768) {
+            if ($(this).scrollTop() > 100) {
+                navbar.addClass('navbar-fixed');
+            } else {
+                navbar.removeClass('navbar-fixed');
+            }
+        }
+    });
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
