@@ -84,13 +84,11 @@
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Demande d'AVI</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Demande d'AVI</li>
-                            </ol>
-                        </nav>
+                        <h1 class="hero-title text-white animated slideInDown">Demande d'AVI</h1>
+                        <p class="hero-description text-white animated slideInDown">
+                            Obtenez votre Attestation de Virement Irrévocable en quelques clics. 
+                            Processus simplifié, traitement rapide et document certifié.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -108,6 +106,20 @@
                         </div>
                         <form id="aviForm">
                             <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="serviceType" required>
+                                            <option value="">Sélectionner un service</option>
+                                            <option value="avi">Attestation AVI</option>
+                                            <option value="logement">Logement étudiant</option>
+                                            <option value="billets">Billets d'avion</option>
+                                            <option value="caution">Caution bancaire</option>
+                                            <option value="visa">Procédure de voyage</option>
+                                            <option value="autre">Autre</option>
+                                        </select>
+                                        <label for="serviceType">Service demandé</label>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <select class="form-select" id="civilite" required>
